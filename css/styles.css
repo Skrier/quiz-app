@@ -1,0 +1,53 @@
+
+
+body {background-color: #f3f3f3;
+ 	  font-family: 'Helvetica Neue',Helvetica,Arial,sans-serif;
+ 	  color: #fff;
+	 }
+
+#frontPage {top: 220px;
+			position: relative;
+			display: none;
+			}
+
+
+#frontPage div h1 {color:#006400;
+				   font-weight: bold;
+				   font-size: 40px;
+				   text-align: center;
+                    }
+
+#frontPage div h1 span {font-style: italic;
+						 font-weight: 45px;
+                       }
+
+#frontPage div input {height: 60px;
+					  width: 140px;
+					  border-top-left-radius: 16px;
+					  border-bottom-right-radius: 16px;
+					  background-color:#006400;	
+					  font-weight: bold;
+					  font-size: 40px;
+					  font-family:inherit;
+					  color: inherit;
+					  border: 2px solid #006400;
+					  display: block;
+					  margin: auto;				      
+					 }
+
+
+#frontPage div input:hover {background-color: #4c924c;
+                             }
+
+#frontPage div input:active {background-color: #7fb17f;
+							position: relative;
+							top: 4px;
+                             }
+
+div:nth-child(2) {position: relative;
+				  top: 20px;}
+
+#mainPage {
+			background-image: url('images/backgroundimage.jpg');
+			
+			}

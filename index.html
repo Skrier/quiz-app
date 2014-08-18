@@ -1,11 +1,61 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-	<meta charset="UTF-8">
-	<title>Quiz App</title>
-</head>
+	<head>
+		<meta charset="UTF-8">
+		<title>Quiz App</title>
+		<link rel="stylesheet" href="css/styles.css">
+		<link rel="stylesheet" href="css/reset.css">
+		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+		<script type="text/javascript" src='js/app.js'></script>
+	</head>
 <body>
-	
-	
+     
+    <div id="frontPage">
+    	<div><h1>Welcome to the <span>South African</span> Quiz App</h1></div>
+		<div><input type="submit" name='play' value="Play?"></div>
+    </div>
+
+    <div id="mainPage">
+		    <div id="header">
+		    	<span id='title'>South African Quiz App</span>
+		    </div>
+			
+			<div id="quizCont"> <!--- Question Container -->
+
+			    <div id="questionNo">
+			    	<span class='questionNo'>Question <span>1</span> of 5</span>
+			    </div>
+
+			    <div id="question">
+			    	<span class='question'></span>
+			    </div>
+
+			    <div class="optionsCont">
+			    	<form action="">
+			    		<span><input type="radio" name="options" value="1"></span>
+			    		<span><input type="radio" name="options" value="2"></span>
+			    		<span><input type="radio" name="options" value="3"></span>
+			    		<span><input type="radio" name="options" value="4"></span>
+			    	</form>
+			    </div>
+
+			    <div id="answerCont">
+		 			<span class='answer'></span>	
+		 		</div>		
+
+			</div>
+
+			<div> <!-- Score -->
+			   <div class="score"></div>
+		       <div class="score"></div>
+		       <div class="score"></div>
+		       <div class="score"></div>
+		       <div class="score"></div>
+			</div> 
+
+			<div> <!-- footer -->
+				<input type="submit" name='restart' value="restart">
+			</div>
+	</div>
 </body>
 </html>
