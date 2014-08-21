@@ -12,7 +12,7 @@
      
     <div id="frontPage">
     	<div><h1>Welcome to the <span>South African</span> Quiz App</h1></div>
-		<div><input type="submit" name='play' value="Play?"></div>
+		<div><input type="submit" name='play' value="Play?" id="playButton"></div>
     </div>
 
     <div id="mainPage">
@@ -27,35 +27,38 @@
 			    </div>
 
 			    <div id="question">
-			    	<span class='question'></span>
+			    	<span class='question1'>The questioins</span>
 			    </div>
 
-			    <div class="optionsCont">
-			    	<form action="">
-			    		<span><input type="radio" name="options" value="1"></span>
-			    		<span><input type="radio" name="options" value="2"></span>
-			    		<span><input type="radio" name="options" value="3"></span>
-			    		<span><input type="radio" name="options" value="4"></span>
-			    	</form>
+			    <div class="optionsContainer">
+			    	<span id="optionsCont">
+				    	<form action="" >
+				    		<span class="choices">1<input type="radio" name="options" value="1"><span id="choice1"></span></span>
+				    		<span class="choices">2<input type="radio" name="options" value="2"><span id="choice2"></span></span>
+				    		<span class="choices">3<input type="radio" name="options" value="3"><span id="choice3"></span></span>
+				    		<span class="choices">4<input type="radio" name="options" value="4"><span id="choice4"></span></span>
+				    	</form>
+			    	</span>
 			    </div>
 
-			    <div id="answerCont">
-		 			<span class='answer'></span>	
+			    <div id="answerContainer">
+		 			<span class='answer'>This is the answer section</span>	
 		 		</div>		
 
 			</div>
 
-			<div> <!-- Score -->
-			   <div class="score"></div>
-		       <div class="score"></div>
-		       <div class="score"></div>
-		       <div class="score"></div>
-		       <div class="score"></div>
-			</div> 
-
-			<div> <!-- footer -->
-				<input type="submit" name='restart' value="restart">
+			<div> <!-- Submit button -->
+				<input type="submit" name='Submit Answer' value="Submit" id="submitButton">
 			</div>
+
+			<div id="score1"> <!-- Score -->
+			   <div class="score one "></div>
+		       <div class="score two"></div>
+		       <div class="score three"></div>
+		       <div class="score four"></div>
+	        </div>
 	</div>
+
+	
 </body>
 </html>

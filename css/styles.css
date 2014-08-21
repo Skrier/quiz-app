@@ -1,13 +1,19 @@
 
 
-body {background-color: #f3f3f3;
+body {background-color: #383838;
  	  font-family: 'Helvetica Neue',Helvetica,Arial,sans-serif;
  	  color: #fff;
+ 	  background-image: url("../images/AC_africa_clear background.jpg");
+	  background-position: 50% 0%;
+	  background-repeat: no-repeat;
+	  background-size: 600px 670px ;
 	 }
 
-#frontPage {top: 220px;
+
+/* Styles the front page*/
+#frontPage {top: 150px;
 			position: relative;
-			display: none;
+			background-size: cover;
 			}
 
 
@@ -47,7 +53,90 @@ body {background-color: #f3f3f3;
 div:nth-child(2) {position: relative;
 				  top: 20px;}
 
-#mainPage {
-			background-image: url('images/backgroundimage.jpg');
-			
+
+/*Styles the question and answer section*/				  
+
+#mainPage {position: relative;
+			top: 150px;
+			display: none;
 			}
+
+
+
+#header {position: relative;
+		}
+
+#title {display: inline-block;
+		color: #12ABDE;
+		font-style: italic;
+		border: 4px solid #12ABDE;
+		background-color: inherit;
+		border-radius: 10px;
+		text-align: center;
+		font-size: 30px;
+		font-weight: bold;
+		text-transform: uppercase;
+		padding: 10px 15px 10px 15px;
+		margin: 0% 33% 0% 33%;
+		min-width: 475px;
+		}
+
+.question1, .questionNo, .answer, #optionsCont {font-size: 20px;
+										          text-transform: uppercase;
+										          color: #006400; 
+										      	  border: 1px solid #006400;
+										      	  font-weight: bold;
+										      	  padding: 5px 10px 5px 10px;									      	  
+										      	  text-align: center;
+										      	  position: relative;
+										      	  margin-left: 33%;
+										      	  margin-right: 33%;
+										      	  display: inline-block;
+										      	  min-width: 500px;
+										      	  background-color: #f3f3f3;
+										      	  opacity: 0.9;
+										      	}
+
+.choices {display: block;
+			margin-top: 15px;
+			text-align: left;}
+
+#question,#answerContainer {
+	top: 0px}
+
+#submitButton {position: relative;
+				margin: auto;
+				display: block;
+				top: 50px;
+			    height: 55px;
+			    width:   95px;
+                border-radius: 8px;
+				background-color: white;	
+				font-weight: bold;
+			    font-size: 20px;
+				font-family:inherit;
+				color: #12ABDE;
+				border: 2px solid #12ABDE;
+				text-transform: uppercase;
+			    opacity: 0.9;}
+
+#submitButton:hover {background-color: #d3d3d3;
+                             }
+
+#submitButton:active {background-color: #bdbdbd;
+					   position: relative;
+					   top: 48px;
+                             }
+			
+#score1 {background-image: url('../images/zalarge.gif');
+		background-repeat: no-repeat; 
+		background-size: 100% 100%;
+		min-height: 200px;
+		min-width: 300px;
+		margin-left: 40px;
+		position: fixed;
+		top: 220px;
+		display: inline-block;
+		opacity: 0;
+			}
+
