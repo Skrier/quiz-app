@@ -140,3 +140,7 @@ div:nth-child(2) {position: relative;
 		opacity: 0;
 			}
 
+.score {min-height: 50px;
+
+}
+

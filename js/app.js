@@ -16,8 +16,8 @@ function questionObject (question, option1, option2, option3, option4, answer, a
 
 /* Objects */
 var question1 = new questionObject('Which of the following in the national flag of South Africa',
-	                                 'url(../images/zalarge.gif)', '../images/namibia-flag.gif', '../images/swaziland-flag.gif', 
-	                                 '../images/bwlarge.gif', '../images/zalarge.gif', 1 );
+	                                 '../images/zalarge.gif','../images/namibia-flag.gif','../images/swaziland-flag.gif', 
+	                                 '../images/bwlarge.gif',"../images/zalarge.gif", 1 );
 
 var question2 = new questionObject('How many official languages does South Africa have', '1', '5', '8', '11', 
 	                                'South Africa has 11 official languages: Afrikaans, English, Ndebele, Northern Sotho, Sotho, Swazi, Tswana, Tsonga, Venda, Xhosa and Zulu',4 );
@@ -46,60 +46,45 @@ $('.answer').css({opacity:0});
 }
 
 function nextQ () {
-var y = total;
-$('.question1').text(questionArray[y].question); 
-$('#choice1').text(questionArray[y].option1); 
-$('#choice2').text(questionArray[y].option2); 
-$('#choice3').text(questionArray[y].option3); 
-$('#choice4').text(questionArray[y].option4); 
+$('.question1').text(questionArray[total].question); 
+$('#choice1').text(questionArray[total].option1); 
+$('#choice2').text(questionArray[total].option2); 
+$('#choice3').text(questionArray[total].option3); 
+$('#choice4').text(questionArray[total].option4); 
+$('#qI').text(total+1);
 }
 
 function answerQ () {
-var y = total;
-var animation = $('.answer').text(questionArray[y-1].answer);
+var animation = $('.answer').text(questionArray[total].answer);
 animation.animate({opacity:0.9},600)
 }
 
-onLoad();  
-
-$('#submitButton').on('mousedown', function(e) {
-e.preventDefault();
-var radioSelection = $('input[name="options"]:checked').val();
-for (var x = 0; x < questionArray.length; x += 1) {
-if (radioSelection === questionArray[x].answerValue) {
-      totalCorrect += 1;
-      total += 1;
+function evaluate () {
+	total += 1; 
       scoreContainer();  
       nextQ();
-      answerQ();     
-  } else {
-      totalCorrect += 0;
-      total += 1; 
-      nextQ();
-      answerQ();
-      scoreContainer();
-  }        
- }
-});
+      answerQ(); 
+      
+}
 
 /* Shows the score */
  function scoreContainer () {
  		if (totalCorrect === 0)	{
              $('.score').css({opacity:0});
  		  } else if (totalCorrect === 1) {
-             $('.score four').animate({opacity:1},600);
+             $('.four').animate({opacity:1},600);
  		  } else if (totalCorrect === 2) {
-             $('.score three').animate({opacity:1},600);
-             $('.score four').animate({opacity:1},600);
+             $('.three').animate({opacity:1},600);
+             $('.four').animate({opacity:1},600);
  		  } else if (totalCorrect === 3) {
- 		  	$('.score two').animate({opacity:1},600);
- 		  	$('.score three').animate({opacity:1},600);
- 		  	$('.score four').animate({opacity:1},600);
+ 		  	$('.two').animate({opacity:1},600);
+ 		  	$('.three').animate({opacity:1},600);
+ 		  	$('.four').animate({opacity:1},600);
  		  } else if (totalCorrect === 4) {
- 		  	$('.score one').animate({opacity:1},600);
- 		  	$('.score two').animate({opacity:1},600);
- 		  	$('.score three').animate({opacity:1},600);
- 		  	$('.score four').animate({opacity:1},600);		  	
+ 		  	$('.one').animate({opacity:1},600);
+ 		  	$('.two').animate({opacity:1},600);
+ 		  	$('.three').animate({opacity:1},600);
+ 		  	$('.four').animate({opacity:1},600);		  	
  		  } else {
  		  	$('.score').css({opacity:0});
  		  };
@@ -117,7 +102,22 @@ var replay = function () {
     }
 }
 
+/*Submits the answer*/
+$('#submitButton').on('mousedown', function(e) {
+e.preventDefault();
+var radioSelection = $('input[name="options"]:checked').val();
+for (var x = 0; x < questionArray.length; x += 1) {
+if (radioSelection === questionArray[x].answerValue) {
+      totalCorrect += 1;     
+      evaluate();  
+  } else {
+      totalCorrect += 0;
+      evaluate(); 
+  }        
+ }
+});
 
+onLoad();  
 
 
 
