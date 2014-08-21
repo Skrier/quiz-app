@@ -60,7 +60,7 @@ animation.animate({opacity:0.9},600)
 }
 
 function evaluate () {
-	total += 1; 
+	  total += 1; 
       scoreContainer();  
       nextQ();
       answerQ(); 
@@ -106,15 +106,11 @@ var replay = function () {
 $('#submitButton').on('mousedown', function(e) {
 e.preventDefault();
 var radioSelection = $('input[name="options"]:checked').val();
-for (var x = 0; x < questionArray.length; x += 1) {
-if (radioSelection === questionArray[x].answerValue) {
+if (radioSelection === questionArray[total].answerValue) {
       totalCorrect += 1;     
-      evaluate();  
-  } else {
-      totalCorrect += 0;
+      } 
       evaluate(); 
-  }        
- }
+         
 });
 
 onLoad();  
