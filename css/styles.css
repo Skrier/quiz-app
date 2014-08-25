@@ -38,7 +38,9 @@ body {background-color: #383838;
 					  color: inherit;
 					  border: 2px solid #006400;
 					  display: block;
-					  margin: auto;				      
+					  margin: auto;	
+					  position: relative;
+				      top: 20px;			      
 					 }
 
 
@@ -49,10 +51,6 @@ body {background-color: #383838;
 							position: relative;
 							top: 4px;
                              }
-
-div:nth-child(2) {position: relative;
-				  top: 20px;}
-
 
 /*Styles the question and answer section*/				  
 
@@ -81,7 +79,7 @@ div:nth-child(2) {position: relative;
 		min-width: 475px;
 		}
 
-.question1, .questionNo, .answer, #optionsCont {font-size: 20px;
+.question1, .questionNo, .answer, .optionsCont {font-size: 20px;
 										          text-transform: uppercase;
 										          color: #006400; 
 										      	  border: 1px solid #006400;
@@ -104,7 +102,7 @@ div:nth-child(2) {position: relative;
 #question,#answerContainer {
 	top: 0px}
 
-#submitButton {position: relative;
+#submitButton, #yesButton, #noButton {position: relative;
 				margin: auto;
 				display: block;
 				top: 50px;
@@ -132,15 +130,36 @@ div:nth-child(2) {position: relative;
 		background-repeat: no-repeat; 
 		background-size: 100% 100%;
 		min-height: 200px;
-		min-width: 300px;
+		min-width: 332px;
 		margin-left: 40px;
-		position: fixed;
-		top: 220px;
+		position: absolute;
+		top: 200px;
 		display: inline-block;
-		opacity: 0;
+		opacity: 1;
 			}
 
 .score {min-height: 50px;
-
+		min-width: 332px;
+		background-color: rgba(56,56,56,1);
+		position: absolute;
+		color:rgba(56,56,56,1);
+		text-align: center;
 }
 
+.two {top: 50px;}
+.three {top: 100px;}
+.four {top: 150px;}
+
+.flagImage {background-size: 100px 60px;
+			height: 60px;
+			width: 100px;
+			}
+
+#finalScore{display: none;}
+
+#yesButton, #noButton {display: none;
+						}
+
+#yesButton {left:575px;}
+
+#noButton {left:600px;}

@@ -30,25 +30,27 @@
 			    	<span class='question1'>The questioins</span>
 			    </div>
 
-			    <div class="optionsContainer">
-			    	<span id="optionsCont">
+			    <div class="optionsContainer" id="radioOptions">
+			    	<span class="optionsCont">
 				    	<form action="" >
-				    		<span class="choices">1<input type="radio" name="options" value="1"><span id="choice1"></span></span>
-				    		<span class="choices">2<input type="radio" name="options" value="2"><span id="choice2"></span></span>
-				    		<span class="choices">3<input type="radio" name="options" value="3"><span id="choice3"></span></span>
-				    		<span class="choices">4<input type="radio" name="options" value="4"><span id="choice4"></span></span>
+				    		<span class="choices">1<input class="radioB" type="radio" name="options" value="1"><span id="choice1"></span></span>
+				    		<span class="choices">2<input class="radioB" type="radio" name="options" value="2"><span id="choice2"></span></span>
+				    		<span class="choices">3<input class="radioB" type="radio" name="options" value="3"><span id="choice3"></span></span>
+				    		<span class="choices">4<input class="radioB" type="radio" name="options" value="4"><span id="choice4"></span></span>
 				    	</form>
 			    	</span>
 			    </div>
-
 			    <div id="answerContainer">
-		 			<span class='answer'>This is the answer section</span>	
-		 		</div>		
-
+		 			<span class='answer'></span>	
+		 		</div>	
+			 
 			</div>
 
 			<div> <!-- Submit button -->
 				<input type="submit" name='Submit Answer' value="Submit" id="submitButton">
+                <input type="submit" name='Play Again' value="Replay" id="yesButton">	
+                <input type="submit" name='Quit' value="Quit" id="noButton">	
+                     
 			</div>
 
 			<div id="score1"> <!-- Score -->
