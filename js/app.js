@@ -146,14 +146,16 @@ if (total <= 3) {
 
 $('#yesButton').on('mousedown', function(e) {
 e.preventDefault();
-$('#submitButton').css('width', '150px');
+$('#submitButton').css('width', '95px');
+$('#submitButton').val('Submit');
 endGame();
 
 });
 
 $('#noButton').on('mousedown', function(e) {
 e.preventDefault();
-$('#submitButton').css('width', '150px');
+$('#submitButton').css('width', '95px');
+$('#submitButton').val('Submit');
 endGame();
  $('#frontPage').fadeIn(1000);
  $('#mainPage').fadeOut(10);	
