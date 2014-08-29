@@ -131,8 +131,13 @@ function submitAnswer () {
 $('#submitButton').on('mousedown', function(e) {
 e.preventDefault();
 var answerText = $('.answer').val();
-if (total <= 4) {
+if (total <= 3) {
 		    submitAnswer();
+        } else if (total === 4) {
+          $('#submitButton').val('See Results?');
+          $('#submitButton').css('width', '150px');
+          submitAnswer();
+          
         }
   else if (total > 4) {
         replay();
