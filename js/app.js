@@ -15,7 +15,7 @@ function questionObject (question, option1, option2, option3, option4, answer, a
 }
 
 /* Objects */
-var question1 = new questionObject('Which of the following in the national flag of South Africa?',
+var question1 = new questionObject('Which of the following is the national flag of South Africa?',
 	                                 "<img class='flagImage' src='images/zalarge.gif' alt='flag' />", "<img class='flagImage' src='images/namibia-flag.gif' alt='flag'/>", "<img class='flagImage' src='images/swaziland-flag.gif' alt='flag'/>", 
 	                                 "<img class='flagImage' src='images/bwlarge.gif' alt'flag' />","<img class='flagImage' src='images/zalarge.gif' alt='flag'/>", 1 );
 
