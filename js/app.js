@@ -135,7 +135,7 @@ if (total <= 4) {
 		    submitAnswer();
         }
 	} 
-  else if (total > 4) {
+  else(total > 4) {
         replay();
 	} 
 });
