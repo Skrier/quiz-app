@@ -134,7 +134,6 @@ var answerText = $('.answer').val();
 if (total <= 4) {
 		    submitAnswer();
         }
-	} 
   else if (total > 4) {
         replay();
 	} 
