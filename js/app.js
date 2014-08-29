@@ -133,9 +133,6 @@ e.preventDefault();
 var answerText = $('.answer').val();
 if (total <= 4) {
 		    submitAnswer();
-        if(answerText == 'All the above.') {
-          replay();
-          console.log(answerText);
         }
 	} 
   else if (total > 4) {
