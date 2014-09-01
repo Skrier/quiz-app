@@ -36,13 +36,17 @@ $('#mainPage').fadeIn(2000);
 });
 
 function nextQ () {
-$('.question1').html(questionArray[total-1].question); 
-$('#choice1').html(questionArray[total-1].option1); 
-$('#choice2').html(questionArray[total-1].option2); 
-$('#choice3').html(questionArray[total-1].option3); 
-$('#choice4').html(questionArray[total-1].option4); 
-$('#qI').html(total);
-console.log(total);
+  if (total<=4) {
+  $('.question1').html(questionArray[total-1].question); 
+  $('#choice1').html(questionArray[total-1].option1); 
+  $('#choice2').html(questionArray[total-1].option2); 
+  $('#choice3').html(questionArray[total-1].option3); 
+  $('#choice4').html(questionArray[total-1].option4); 
+  $('#qI').html(total);
+  console.log(total);
+  } else {
+    console.log('The quiz is finished')
+  }
 }
 
 function answerQ () {
